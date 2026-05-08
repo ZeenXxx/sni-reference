@@ -1,0 +1,181 @@
+# index.html
+
+```html
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Referensi SNI</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #0f172a;
+      color: white;
+      min-height: 100vh;
+      padding: 40px;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .header {
+      margin-bottom: 40px;
+    }
+
+    .header h1 {
+      font-size: 42px;
+      margin-bottom: 10px;
+    }
+
+    .header p {
+      color: #94a3b8;
+      line-height: 1.6;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #1e293b;
+      border-radius: 18px;
+      padding: 24px;
+      transition: 0.25s ease;
+      border: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: #38bdf8;
+      box-shadow: 0 10px 30px rgba(56,189,248,0.2);
+    }
+
+    .card h2 {
+      font-size: 20px;
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      color: #cbd5e1;
+      margin-bottom: 18px;
+      line-height: 1.5;
+    }
+
+    .btn {
+      display: inline-block;
+      text-decoration: none;
+      background: #38bdf8;
+      color: #0f172a;
+      padding: 12px 18px;
+      border-radius: 10px;
+      font-weight: bold;
+      transition: 0.2s ease;
+    }
+
+    .btn:hover {
+      background: #7dd3fc;
+    }
+
+    footer {
+      margin-top: 50px;
+      color: #64748b;
+      text-align: center;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <div class="header">
+      <h1>Referensi SNI</h1>
+      <p>
+        Kumpulan file referensi teknik sipil dan standar SNI.
+        Klik tombol untuk membuka dokumen PDF secara langsung.
+      </p>
+    </div>
+
+    <div class="grid">
+
+      <div class="card">
+        <h2>SNI 2052:2024</h2>
+        <p>
+          Baja tulangan beton untuk konstruksi bangunan.
+        </p>
+
+        <a class="btn"
+           href="799951895-SNI-2052-2024-Baja-tulangan-beto....pdf"
+           target="_blank">
+          Buka PDF
+        </a>
+      </div>
+
+      <!-- Tambahkan card baru di sini -->
+
+    </div>
+
+    <footer>
+      Dibuat menggunakan GitHub Pages.
+    </footer>
+
+  </div>
+</body>
+</html>
+```
+
+# Cara Pakai
+
+1. Copy semua isi HTML di atas.
+2. Buka repository GitHub.
+3. Klik `Add file` → `Create new file`.
+4. Nama file:
+
+```text
+index.html
+```
+
+5. Paste kode HTML.
+6. Klik `Commit changes`.
+
+---
+
+# Penting
+
+Pada bagian:
+
+```html
+href="799951895-SNI-2052-2024-Baja-tulangan-beto....pdf"
+```
+
+ubah sesuai nama file PDF asli di repository.
+
+Contoh:
+
+```html
+href="SNI2052-2024.pdf"
+```
+
+---
+
+# Hasil Akhir
+
+Nanti website GitHub Pages lu akan tampil seperti portal dokumen modern:
+
+* ada card,
+* tombol buka PDF,
+* responsive,
+* dan jauh lebih profesional daripada daftar file polos bawaan GitHub.
+
+Karena kalau engineer sudah capek ngurus struktur, minimal tampilan dokumentasinya jangan terlihat seperti folder warnet tahun 2009.
