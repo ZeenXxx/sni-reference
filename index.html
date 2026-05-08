@@ -1,200 +1,354 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Referensi SNI</title>
 
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, sans-serif;
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial,sans-serif;
     }
 
-    body {
-      background: #0f172a;
-      color: white;
-      min-height: 100vh;
-      padding: 40px;
+    body{
+      background:#020617;
+      color:white;
+      min-height:100vh;
+      padding:40px;
+      overflow-x:hidden;
     }
 
-    .container {
-      max-width: 1100px;
-      margin: auto;
+    .bg-blur{
+      position:fixed;
+
+      width:700px;
+      height:700px;
+
+      background:#0ea5e9;
+
+      filter:blur(180px);
+
+      opacity:0.15;
+
+      top:-200px;
+      right:-200px;
+
+      z-index:-1;
     }
 
-    .header {
-      margin-bottom: 40px;
+    .container{
+      max-width:1100px;
+      margin:auto;
     }
 
-    .header h1 {
-      font-size: 42px;
-      margin-bottom: 10px;
+    .hero{
+      text-align:center;
+      margin-bottom:60px;
     }
 
-    .header p {
-      color: #94a3b8;
-      line-height: 1.6;
+    .hero h1{
+      font-size:64px;
+      margin-bottom:16px;
+
+      background:linear-gradient(
+        to right,
+        #38bdf8,
+        #ffffff
+      );
+
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
     }
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
+    .hero p{
+      color:#94a3b8;
+      max-width:700px;
+      margin:auto;
+      line-height:1.8;
+      font-size:16px;
     }
 
-    .card {
-      background: #1e293b;
-      border-radius: 18px;
-      padding: 24px;
-      transition: 0.25s ease;
-      border: 1px solid rgba(255,255,255,0.05);
+    .socials{
+      margin-top:30px;
+
+      display:flex;
+      gap:16px;
+
+      justify-content:center;
+      flex-wrap:wrap;
     }
 
-    .card:hover {
-      transform: translateY(-5px);
-      border-color: #38bdf8;
-      box-shadow: 0 10px 30px rgba(56,189,248,0.2);
+    .socials a{
+      text-decoration:none;
+
+      background:rgba(255,255,255,0.05);
+
+      border:1px solid rgba(255,255,255,0.08);
+
+      color:white;
+
+      padding:12px 20px;
+
+      border-radius:12px;
+
+      transition:0.25s ease;
     }
 
-    .card h2 {
-      font-size: 20px;
-      margin-bottom: 12px;
+    .socials a:hover{
+      background:#38bdf8;
+      color:#020617;
+
+      transform:translateY(-3px);
     }
 
-    .card p {
-      color: #cbd5e1;
-      margin-bottom: 18px;
-      line-height: 1.5;
+    .grid{
+      display:grid;
+
+      grid-template-columns:
+      repeat(auto-fit,minmax(280px,1fr));
+
+      gap:20px;
     }
 
-    .btn {
-      display: inline-block;
-      text-decoration: none;
-      background: #38bdf8;
-      color: #0f172a;
-      padding: 12px 18px;
-      border-radius: 10px;
-      font-weight: bold;
-      transition: 0.2s ease;
+    .card{
+      background:#1e293b;
+
+      border-radius:18px;
+
+      padding:24px;
+
+      transition:0.25s ease;
+
+      border:1px solid rgba(255,255,255,0.05);
+
+      backdrop-filter:blur(12px);
     }
 
-    .btn:hover {
-      background: #7dd3fc;
+    .card:hover{
+      transform:translateY(-5px);
+
+      border-color:#38bdf8;
+
+      box-shadow:
+      0 10px 30px rgba(56,189,248,0.2);
     }
 
-    footer {
-      margin-top: 50px;
-      color: #64748b;
-      text-align: center;
-      font-size: 14px;
+    .card h2{
+      font-size:20px;
+      margin-bottom:14px;
     }
-    .watermark {
-      position: fixed;
-      bottom: 20px;
-      right: 25px;
-    
-      font-size: 14px;
-      color: rgba(255,255,255,0.08);
-    
-      pointer-events: none;
-      user-select: none;
-    
-      letter-spacing: 2px;
-      font-weight: bold;
+
+    .card p{
+      color:#cbd5e1;
+
+      margin-bottom:18px;
+
+      line-height:1.6;
     }
+
+    .btn{
+      display:inline-block;
+
+      text-decoration:none;
+
+      background:#38bdf8;
+
+      color:#020617;
+
+      padding:12px 18px;
+
+      border-radius:10px;
+
+      font-weight:bold;
+
+      transition:0.2s ease;
+    }
+
+    .btn:hover{
+      background:#7dd3fc;
+    }
+
+    footer{
+      margin-top:60px;
+
+      text-align:center;
+
+      color:#64748b;
+
+      font-size:14px;
+    }
+
+    .watermark{
+      position:fixed;
+
+      bottom:20px;
+      right:25px;
+
+      color:rgba(255,255,255,0.08);
+
+      font-size:14px;
+
+      font-weight:bold;
+
+      letter-spacing:2px;
+
+      pointer-events:none;
+
+      user-select:none;
+    }
+
   </style>
 </head>
+
 <body>
+
+  <div class="bg-blur"></div>
+
   <div class="container">
 
-    <div class="header">
-      <h1>Referensi SNI</h1>
+    <div class="hero">
+
+      <h1>REFERENSI SNI</h1>
+
       <p>
-        Kumpulan file referensi teknik sipil dan standar SNI.
-        Klik tombol untuk membuka dokumen PDF secara langsung.
+        Portal referensi teknik sipil, standar nasional Indonesia,
+        dan dokumen pendukung perencanaan struktur.
       </p>
+
+      <div class="socials">
+
+        <a href="https://instagram.com/arieftediansyah_"
+           target="_blank">
+
+          <i class="fa-brands fa-instagram"></i>
+          Instagram
+        </a>
+
+        <a href="https://github.com/ZeenXxx"
+           target="_blank">
+
+          <i class="fa-brands fa-github"></i>
+          GitHub
+        </a>
+
+        <a href="https://linkedin.com/in/arief-tediansyah-214943287"
+           target="_blank">
+
+          <i class="fa-brands fa-linkedin"></i>
+          LinkedIn
+        </a>
+
+      </div>
+
     </div>
 
     <div class="grid">
 
       <div class="card">
+
         <h2>SNI 2052:2024</h2>
+
         <p>
-          Baja tulangan beton
+          Baja tulangan beton.
         </p>
 
         <a class="btn"
            href="SNI 2052-2024.pdf"
            target="_blank">
+
           Buka PDF
         </a>
+
       </div>
 
-     <div class="card">
-          <h2>SNI 2847:2019</h2>
-          <p>
-            Persyaratan beton struktural untuk bangunan gedung dan penjelasan (ACI 318M-14 dan ACI 318RM-14, MOD)
-          </p>
-  
-          <a class="btn"
-             href="SNI 2847-2019.pdf"
-             target="_blank">
-            Buka PDF
-          </a>
-        </div>
+      <div class="card">
 
-     <div class="card">
-          <h2>SNI 1727:2020</h2>
-          <p>
-            Beban desain minimum dan kriteria terkait untuk bangunan gedung dan struktur lain
-          </p>
-  
-          <a class="btn"
-             href="SNI 1727-2020.pdf"
-             target="_blank">
-            Buka PDF
-          </a>
-        </div>
+        <h2>SNI 2847:2019</h2>
 
-     <div class="card">
-          <h2>SNI 1726:2019</h2>
-          <p>
-            Tata cara perencanaan ketahanan gempa untuk struktur bangunan gedung dan nongedung
-          </p>
-  
-          <a class="btn"
-             href="SNI 1726-2019.pdf"
-             target="_blank">
-            Buka PDF
-          </a>
-        </div>
+        <p>
+          Persyaratan beton struktural untuk bangunan gedung.
+        </p>
 
-     <div class="card">
-          <h2>PusGen2024</h2>
-          <p>
-            PETA SUMBER DAN BAHAYA GEMPA INDONESIA TAHUN 2024
-          </p>
-  
-          <a class="btn"
-             href="PusGen2024.pdf"
-             target="_blank">
-            Buka PDF
-          </a>
-        </div>
-      
+        <a class="btn"
+           href="SNI 2847-2019.pdf"
+           target="_blank">
+
+          Buka PDF
+        </a>
+
+      </div>
+
+      <div class="card">
+
+        <h2>SNI 1727:2020</h2>
+
+        <p>
+          Beban desain minimum dan kriteria terkait.
+        </p>
+
+        <a class="btn"
+           href="SNI 1727-2020.pdf"
+           target="_blank">
+
+          Buka PDF
+        </a>
+
+      </div>
+
+      <div class="card">
+
+        <h2>SNI 1726:2019</h2>
+
+        <p>
+          Tata cara perencanaan ketahanan gempa.
+        </p>
+
+        <a class="btn"
+           href="SNI 1726-2019.pdf"
+           target="_blank">
+
+          Buka PDF
+        </a>
+
+      </div>
+
+      <div class="card">
+
+        <h2>PusGen 2024</h2>
+
+        <p>
+          Peta sumber dan bahaya gempa Indonesia tahun 2024.
+        </p>
+
+        <a class="btn"
+           href="PusGen2024.pdf"
+           target="_blank">
+
+          Buka PDF
+        </a>
+
+      </div>
+
     </div>
-    
+
     <footer>
-      Dibuat menggunakan GitHub Pages.
+      © 2026 Arief Tediansyah
     </footer>
 
   </div>
-<div class="watermark">
-  Arief Tediansyah
-</div>
+
+  <div class="watermark">
+    Arief Tediansyah
+  </div>
+
 </body>
 </html>
-```
