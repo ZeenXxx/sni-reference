@@ -45,9 +45,11 @@
       z-index:-1;
     }
 
-    .container{
-      max-width:1100px;
-      margin:auto;
+    .container {
+        width: 100%;
+        max-width: 1200px;
+        margin: auto;
+        padding: 20px;
     }
 
     .hero{
@@ -55,19 +57,14 @@
       margin-bottom:60px;
     }
 
-    .hero h1{
-      font-size:64px;
-      margin-bottom:16px;
-
-      background:linear-gradient(
-        to right,
-        #38bdf8,
-        #ffffff
-      );
-
-      -webkit-background-clip:text;
-      -webkit-text-fill-color:transparent;
+    .hero h1 {
+        font-size: clamp(42px, 8vw, 96px);
+        line-height: 1.1;
     }
+    
+          -webkit-background-clip:text;
+          -webkit-text-fill-color:transparent;
+        }
 
     .hero p{
       color:#94a3b8;
