@@ -2,13 +2,22 @@
 <html lang="id">
 
 <head>
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Referensi SNI</title>
+  <title>AT Structura | Referensi SNI</title>
 
+  <!-- ICON -->
   <link rel="stylesheet"
   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- FONT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+  rel="stylesheet">
 
   <style>
 
@@ -16,16 +25,26 @@
       margin:0;
       padding:0;
       box-sizing:border-box;
-      font-family:Arial,sans-serif;
+      font-family:'Inter',sans-serif;
+    }
+
+    html{
+      scroll-behavior:smooth;
     }
 
     body{
       background:#020617;
       color:white;
       min-height:100vh;
-      padding:40px;
       overflow-x:hidden;
+      padding:40px 20px;
     }
+
+    a{
+      text-decoration:none;
+    }
+
+    /* BACKGROUND */
 
     .bg-blur{
       position:fixed;
@@ -45,37 +64,156 @@
       z-index:-1;
     }
 
-    .container {
-        width: 100%;
-        max-width: 1200px;
-        margin: auto;
-        padding: 20px;
+    .bg-blur2{
+      position:fixed;
+
+      width:500px;
+      height:500px;
+
+      background:#38bdf8;
+
+      filter:blur(180px);
+
+      opacity:0.10;
+
+      bottom:-200px;
+      left:-200px;
+
+      z-index:-1;
     }
+
+    /* CONTAINER */
+
+    .container{
+      width:100%;
+      max-width:1200px;
+      margin:auto;
+    }
+
+    /* NAVBAR */
+
+    .navbar{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+
+      margin-bottom:60px;
+
+      padding:18px 24px;
+
+      border:1px solid rgba(255,255,255,0.05);
+
+      background:rgba(255,255,255,0.03);
+
+      backdrop-filter:blur(12px);
+
+      border-radius:20px;
+    }
+
+    .logo{
+      font-size:24px;
+      font-weight:800;
+      letter-spacing:1px;
+    }
+
+    .logo span{
+      color:#38bdf8;
+    }
+
+    .nav-links{
+      display:flex;
+      gap:24px;
+      flex-wrap:wrap;
+    }
+
+    .nav-links a{
+      color:#cbd5e1;
+      transition:0.25s;
+      font-size:15px;
+    }
+
+    .nav-links a:hover{
+      color:#38bdf8;
+    }
+
+    /* HERO */
 
     .hero{
       text-align:center;
-      margin-bottom:60px;
+      margin-bottom:80px;
     }
 
-    .hero h1 {
-        font-size: clamp(42px, 8vw, 96px);
-        line-height: 1.1;
+    .hero h1{
+      font-size:clamp(42px,8vw,92px);
+      line-height:1.1;
+      margin-bottom:24px;
+
+      background:linear-gradient(
+        to right,
+        #38bdf8,
+        #ffffff
+      );
+
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
     }
-    
-          -webkit-background-clip:text;
-          -webkit-text-fill-color:transparent;
-        }
 
     .hero p{
       color:#94a3b8;
-      max-width:700px;
+
+      max-width:760px;
+
       margin:auto;
-      line-height:1.8;
-      font-size:16px;
+
+      line-height:1.9;
+
+      font-size:17px;
     }
 
+    .hero-buttons{
+      margin-top:35px;
+
+      display:flex;
+      justify-content:center;
+      gap:16px;
+
+      flex-wrap:wrap;
+    }
+
+    .hero-btn{
+      padding:14px 22px;
+
+      border-radius:14px;
+
+      font-weight:600;
+
+      transition:0.25s ease;
+    }
+
+    .hero-btn.primary{
+      background:#38bdf8;
+      color:#020617;
+    }
+
+    .hero-btn.primary:hover{
+      background:#7dd3fc;
+      transform:translateY(-3px);
+    }
+
+    .hero-btn.secondary{
+      border:1px solid rgba(255,255,255,0.08);
+      color:white;
+      background:rgba(255,255,255,0.03);
+    }
+
+    .hero-btn.secondary:hover{
+      background:rgba(255,255,255,0.08);
+    }
+
+    /* SOCIAL */
+
     .socials{
-      margin-top:30px;
+      margin-top:40px;
 
       display:flex;
       gap:16px;
@@ -85,8 +223,6 @@
     }
 
     .socials a{
-      text-decoration:none;
-
       background:rgba(255,255,255,0.05);
 
       border:1px solid rgba(255,255,255,0.08);
@@ -95,7 +231,7 @@
 
       padding:12px 20px;
 
-      border-radius:12px;
+      border-radius:14px;
 
       transition:0.25s ease;
     }
@@ -107,23 +243,44 @@
       transform:translateY(-3px);
     }
 
+    /* SECTION */
+
+    .section-title{
+      text-align:center;
+      margin-bottom:50px;
+    }
+
+    .section-title h2{
+      font-size:42px;
+      margin-bottom:14px;
+    }
+
+    .section-title p{
+      color:#94a3b8;
+      line-height:1.8;
+    }
+
+    /* GRID */
+
     .grid{
       display:grid;
 
       grid-template-columns:
-      repeat(auto-fit,minmax(280px,1fr));
+      repeat(auto-fit,minmax(300px,1fr));
 
-      gap:20px;
+      gap:24px;
     }
+
+    /* CARD */
 
     .card{
       background:#1e293b;
 
-      border-radius:18px;
+      border-radius:24px;
 
-      padding:24px;
+      padding:28px;
 
-      transition:0.25s ease;
+      transition:0.3s ease;
 
       border:1px solid rgba(255,255,255,0.05);
 
@@ -131,51 +288,179 @@
     }
 
     .card:hover{
-      transform:translateY(-5px);
+      transform:translateY(-6px);
 
       border-color:#38bdf8;
 
       box-shadow:
-      0 10px 30px rgba(56,189,248,0.2);
+      0 12px 35px rgba(56,189,248,0.18);
+    }
+
+    .card-icon{
+      width:64px;
+      height:64px;
+
+      border-radius:18px;
+
+      background:rgba(56,189,248,0.10);
+
+      display:flex;
+      align-items:center;
+      justify-content:center;
+
+      margin-bottom:22px;
+
+      color:#38bdf8;
+
+      font-size:26px;
     }
 
     .card h2{
-      font-size:20px;
+      font-size:24px;
       margin-bottom:14px;
     }
 
     .card p{
       color:#cbd5e1;
 
-      margin-bottom:18px;
+      margin-bottom:22px;
 
-      line-height:1.6;
+      line-height:1.7;
+    }
+
+    /* BUTTONS */
+
+    .buttons{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
     }
 
     .btn{
       display:inline-block;
 
-      text-decoration:none;
-
-      background:#38bdf8;
-
-      color:#020617;
-
       padding:12px 18px;
 
-      border-radius:10px;
+      border-radius:12px;
 
-      font-weight:bold;
+      font-weight:600;
 
-      transition:0.2s ease;
+      transition:0.25s ease;
     }
 
-    .btn:hover{
+    .btn-view{
+      background:#38bdf8;
+      color:#020617;
+    }
+
+    .btn-view:hover{
       background:#7dd3fc;
+      transform:translateY(-2px);
     }
+
+    .btn-direct{
+      background:#0f172a;
+
+      color:white;
+
+      border:1px solid rgba(255,255,255,0.08);
+    }
+
+    .btn-direct:hover{
+      background:#334155;
+    }
+
+    .btn-download{
+      background:#334155;
+      color:white;
+    }
+
+    .btn-download:hover{
+      background:#475569;
+    }
+
+    /* ABOUT */
+
+    .about{
+      margin-top:100px;
+
+      background:#0f172a;
+
+      border:1px solid rgba(255,255,255,0.05);
+
+      border-radius:32px;
+
+      padding:50px;
+
+      display:grid;
+
+      grid-template-columns:
+      repeat(auto-fit,minmax(300px,1fr));
+
+      gap:40px;
+
+      align-items:center;
+    }
+
+    .about img{
+      width:100%;
+      max-width:350px;
+
+      border-radius:28px;
+
+      border:1px solid rgba(56,189,248,0.15);
+
+      box-shadow:
+      0 15px 40px rgba(56,189,248,0.12);
+    }
+
+    .about-text h3{
+      color:#38bdf8;
+
+      margin-bottom:12px;
+
+      font-size:14px;
+
+      letter-spacing:2px;
+    }
+
+    .about-text h2{
+      font-size:42px;
+      margin-bottom:20px;
+    }
+
+    .about-text p{
+      color:#cbd5e1;
+
+      line-height:1.9;
+
+      margin-bottom:28px;
+    }
+
+    .skills{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+    }
+
+    .skills span{
+      padding:10px 16px;
+
+      border-radius:12px;
+
+      background:rgba(56,189,248,0.10);
+
+      border:1px solid rgba(56,189,248,0.15);
+
+      color:#7dd3fc;
+
+      font-size:14px;
+    }
+
+    /* FOOTER */
 
     footer{
-      margin-top:60px;
+      margin-top:80px;
 
       text-align:center;
 
@@ -184,17 +469,19 @@
       font-size:14px;
     }
 
+    /* WATERMARK */
+
     .watermark{
       position:fixed;
 
       bottom:20px;
       right:25px;
 
-      color:rgba(255,255,255,0.08);
+      color:rgba(255,255,255,0.06);
 
       font-size:14px;
 
-      font-weight:bold;
+      font-weight:700;
 
       letter-spacing:2px;
 
@@ -203,23 +490,88 @@
       user-select:none;
     }
 
+    /* RESPONSIVE */
+
+    @media(max-width:768px){
+
+      .navbar{
+        flex-direction:column;
+        gap:20px;
+      }
+
+      .nav-links{
+        justify-content:center;
+      }
+
+      .about{
+        padding:30px;
+      }
+
+      .about-text h2{
+        font-size:32px;
+      }
+
+    }
+
   </style>
+
 </head>
 
 <body>
 
   <div class="bg-blur"></div>
+  <div class="bg-blur2"></div>
 
   <div class="container">
+
+    <!-- NAVBAR -->
+
+    <div class="navbar">
+
+      <div class="logo">
+        AT <span>STRUCTURA</span>
+      </div>
+
+      <div class="nav-links">
+
+        <a href="#">Home</a>
+        <a href="#">Reference Center</a>
+        <a href="#">Engineering Tools</a>
+        <a href="#">Technical Assistance</a>
+
+      </div>
+
+    </div>
+
+    <!-- HERO -->
 
     <div class="hero">
 
       <h1>REFERENSI SNI</h1>
 
       <p>
-        Portal referensi teknik sipil, standar nasional Indonesia,
-        dan dokumen pendukung perencanaan struktur.
+        Portal referensi teknik sipil, engineering resources,
+        dan dokumen pendukung perencanaan struktur
+        untuk mahasiswa dan engineer Indonesia.
       </p>
+
+      <div class="hero-buttons">
+
+        <a class="hero-btn primary"
+           href="#references">
+
+          Explore References
+        </a>
+
+        <a class="hero-btn secondary"
+           href="#about">
+
+          About Creator
+        </a>
+
+      </div>
+
+      <!-- SOCIAL -->
 
       <div class="socials">
 
@@ -248,160 +600,289 @@
 
     </div>
 
-    <div class="grid">
+    <!-- REFERENCES -->
 
-      <div class="card">
+    <div id="references">
 
-        <h2>SNI 2052:2024</h2>
+      <div class="section-title">
+
+        <h2>Featured References</h2>
 
         <p>
-          Baja tulangan beton.
+          Referensi teknik sipil dan standar
+          yang paling sering digunakan.
         </p>
 
+      </div>
+
+      <div class="grid">
+
+        <!-- CARD 1 -->
+
+        <div class="card">
+
+          <div class="card-icon">
+            <i class="fa-solid fa-file-lines"></i>
+          </div>
+
+          <h2>SNI 2052:2024</h2>
+
+          <p>
+            Baja tulangan beton.
+          </p>
+
           <div class="buttons">
-          
-            <a class="btn"
+
+            <a class="btn btn-view"
                href="https://docs.google.com/gview?embedded=1&url=https://zeenxxx.github.io/sni-reference/SNI%202052-2024.pdf"
                target="_blank">
-          
-              Buka PDF
+
+              Baca Online
             </a>
-          
-            <a class="btn download"
+
+            <a class="btn btn-direct"
+               href="SNI 2052-2024.pdf#page=1"
+               target="_blank">
+
+              Open Direct
+            </a>
+
+            <a class="btn btn-download"
                href="SNI 2052-2024.pdf"
                download>
-          
+
               Download
             </a>
-          
+
           </div>
 
+        </div>
 
-      </div>
+        <!-- CARD 2 -->
 
-      <div class="card">
+        <div class="card">
 
-        <h2>SNI 2847:2019</h2>
+          <div class="card-icon">
+            <i class="fa-solid fa-building"></i>
+          </div>
 
-        <p>
-          Persyaratan beton struktural untuk bangunan gedung.
-        </p>
+          <h2>SNI 2847:2019</h2>
+
+          <p>
+            Persyaratan beton struktural
+            untuk bangunan gedung.
+          </p>
 
           <div class="buttons">
-          
-            <a class="btn"
+
+            <a class="btn btn-view"
                href="https://docs.google.com/gview?embedded=1&url=https://zeenxxx.github.io/sni-reference/SNI%202847-2019.pdf"
                target="_blank">
-          
-              Buka PDF
+
+              Baca Online
             </a>
-          
-            <a class="btn download"
+
+            <a class="btn btn-direct"
+               href="SNI 2847-2019.pdf#page=1"
+               target="_blank">
+
+              Open Direct
+            </a>
+
+            <a class="btn btn-download"
                href="SNI 2847-2019.pdf"
                download>
-          
+
               Download
             </a>
-          
+
           </div>
 
-      </div>
+        </div>
 
-      <div class="card">
+        <!-- CARD 3 -->
 
-        <h2>SNI 1727:2020</h2>
+        <div class="card">
 
-        <p>
-          Beban desain minimum dan kriteria terkait.
-        </p>
+          <div class="card-icon">
+            <i class="fa-solid fa-layer-group"></i>
+          </div>
+
+          <h2>SNI 1727:2020</h2>
+
+          <p>
+            Beban desain minimum dan
+            kriteria terkait.
+          </p>
 
           <div class="buttons">
-          
-            <a class="btn"
+
+            <a class="btn btn-view"
                href="https://docs.google.com/gview?embedded=1&url=https://zeenxxx.github.io/sni-reference/SNI%201727-2020.pdf"
                target="_blank">
-          
-              Buka PDF
+
+              Baca Online
             </a>
-          
-            <a class="btn download"
+
+            <a class="btn btn-direct"
+               href="SNI 1727-2020.pdf#page=1"
+               target="_blank">
+
+              Open Direct
+            </a>
+
+            <a class="btn btn-download"
                href="SNI 1727-2020.pdf"
                download>
-          
+
               Download
             </a>
 
-</div>
+          </div>
 
-      </div>
+        </div>
 
-      <div class="card">
+        <!-- CARD 4 -->
 
-        <h2>SNI 1726:2019</h2>
+        <div class="card">
 
-        <p>
-          Tata cara perencanaan ketahanan gempa.
-        </p>
+          <div class="card-icon">
+            <i class="fa-solid fa-house-crack"></i>
+          </div>
+
+          <h2>SNI 1726:2019</h2>
+
+          <p>
+            Tata cara perencanaan
+            ketahanan gempa.
+          </p>
 
           <div class="buttons">
-          
-            <a class="btn"
+
+            <a class="btn btn-view"
                href="https://docs.google.com/gview?embedded=1&url=https://zeenxxx.github.io/sni-reference/SNI%201726-2019.pdf"
                target="_blank">
-          
-              Buka PDF
+
+              Baca Online
             </a>
-          
-            <a class="btn download"
+
+            <a class="btn btn-direct"
+               href="SNI 1726-2019.pdf#page=1"
+               target="_blank">
+
+              Open Direct
+            </a>
+
+            <a class="btn btn-download"
                href="SNI 1726-2019.pdf"
                download>
-          
+
               Download
             </a>
-          
+
           </div>
 
-      </div>
+        </div>
 
-      <div class="card">
+        <!-- CARD 5 -->
 
-        <h2>PusGen 2024</h2>
+        <div class="card">
 
-        <p>
-          Peta sumber dan bahaya gempa Indonesia tahun 2024.
-        </p>
+          <div class="card-icon">
+            <i class="fa-solid fa-earth-asia"></i>
+          </div>
+
+          <h2>PusGen 2024</h2>
+
+          <p>
+            Peta sumber dan bahaya gempa
+            Indonesia tahun 2024.
+          </p>
 
           <div class="buttons">
-          
-            <a class="btn"
+
+            <a class="btn btn-view"
                href="https://docs.google.com/gview?embedded=1&url=https://zeenxxx.github.io/sni-reference/PusGen2024.pdf"
                target="_blank">
-          
-              Buka PDF
+
+              Baca Online
             </a>
-          
-            <a class="btn download"
+
+            <a class="btn btn-direct"
+               href="PusGen2024.pdf#page=1"
+               target="_blank">
+
+              Open Direct
+            </a>
+
+            <a class="btn btn-download"
                href="PusGen2024.pdf"
                download>
-          
+
               Download
             </a>
-          
+
           </div>
+
+        </div>
 
       </div>
 
     </div>
 
+    <!-- ABOUT -->
+
+    <div class="about" id="about">
+
+      <div>
+        <img src="assets/images/arief.png"
+             alt="Arief Tediansyah">
+      </div>
+
+      <div class="about-text">
+
+        <h3>ABOUT THE CREATOR</h3>
+
+        <h2>
+          Arief Tediansyah
+        </h2>
+
+        <p>
+          Founder of AT Structura.
+          Mahasiswa S1 Teknik Sipil Universitas Jenderal Achmad Yani yang berfokus pada
+          structural engineering, engineering resources,
+          dan pengembangan technical tools
+          untuk mahasiswa dan engineer Indonesia.
+        </p>
+
+        <div class="skills">
+
+          <span>Structural Engineering</span>
+          <span>ETABS</span>
+          <span>AutoCAD</span>
+          <span>Hydrology</span>
+          <span>Engineering Documentation</span>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- FOOTER -->
+
     <footer>
-      © 2026 Arief Tediansyah
+      © 2026 AT Structura | Engineering Resources & Technical Support
     </footer>
 
   </div>
+
+  <!-- WATERMARK -->
 
   <div class="watermark">
     Arief Tediansyah
   </div>
 
 </body>
+
 </html>
