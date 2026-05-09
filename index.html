@@ -8,16 +8,16 @@
 
   <title>AT Structura | Referensi SNI</title>
 
-  <!-- ICON -->
-  <link rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
   <!-- FONT -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
   rel="stylesheet">
+
+  <!-- ICON -->
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <style>
 
@@ -146,6 +146,7 @@
     .hero h1{
       font-size:clamp(42px,8vw,92px);
       line-height:1.1;
+
       margin-bottom:24px;
 
       background:linear-gradient(
@@ -210,7 +211,7 @@
       background:rgba(255,255,255,0.08);
     }
 
-    /* SOCIAL */
+    /* SOCIALS */
 
     .socials{
       margin-top:40px;
@@ -517,7 +518,9 @@
 
 </head>
 
-<body>
+<body id="top">
+
+  <!-- BACKGROUND -->
 
   <div class="bg-blur"></div>
   <div class="bg-blur2"></div>
@@ -534,10 +537,15 @@
 
       <div class="nav-links">
 
-        <a href="#">Home</a>
-        <a href="#">Reference Center</a>
-        <a href="#">Engineering Tools</a>
-        <a href="#">Technical Assistance</a>
+        <a href="#top">Home</a>
+
+        <a href="#references">
+          Reference Center
+        </a>
+
+        <a href="#about">
+          About
+        </a>
 
       </div>
 
@@ -600,7 +608,7 @@
 
     </div>
 
-    <!-- REFERENCES -->
+    <!-- REFERENCE SECTION -->
 
     <div id="references">
 
@@ -617,7 +625,7 @@
 
       <div class="grid">
 
-        <!-- CARD 1 -->
+        <!-- SNI 2052 -->
 
         <div class="card">
 
@@ -658,7 +666,7 @@
 
         </div>
 
-        <!-- CARD 2 -->
+        <!-- SNI 2847 -->
 
         <div class="card">
 
@@ -700,7 +708,7 @@
 
         </div>
 
-        <!-- CARD 3 -->
+        <!-- SNI 1727 -->
 
         <div class="card">
 
@@ -742,7 +750,7 @@
 
         </div>
 
-        <!-- CARD 4 -->
+        <!-- SNI 1726 -->
 
         <div class="card">
 
@@ -784,7 +792,7 @@
 
         </div>
 
-        <!-- CARD 5 -->
+        <!-- PUSGEN -->
 
         <div class="card">
 
@@ -835,8 +843,10 @@
     <div class="about" id="about">
 
       <div>
+
         <img src="assets/images/arief.png"
              alt="Arief Tediansyah">
+
       </div>
 
       <div class="about-text">
@@ -849,7 +859,7 @@
 
         <p>
           Founder of AT Structura.
-          Mahasiswa S1 Teknik Sipil Universitas Jenderal Achmad Yani yang berfokus pada
+          Mahasiswa Teknik Sipil yang berfokus pada
           structural engineering, engineering resources,
           dan pengembangan technical tools
           untuk mahasiswa dan engineer Indonesia.
